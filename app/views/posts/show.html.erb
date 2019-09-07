@@ -6,5 +6,12 @@
   </div>
   <div class="comments">
     <h2>Comments</h2>
+    <%= will_paginate @comments %>
+    <ul id="comments" class="comments">
+      <%= render @comments %>
+    </ul>
+    <div id="infinite-scrolling">
+      <%# <%= will_paginate @comments %>
+    </div>
   </div>
 </div>
