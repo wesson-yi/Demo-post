@@ -5,11 +5,6 @@ class PostsController < ApplicationController
     # We use Post.first here for simplicity because the ID is randomized
     # However, your code should not rely on static IDs
     @post = Post.first
-    @comments = @post.comments.paginate(page: params[:page], per_page: 3)
-
-    respond_to do |format|
-      format.html
-      format.js
-    end
+    @comments = @post.comments.paginate(page: params[:page], per_page: 100)
   end
 end

@@ -1,7 +1,7 @@
 $('#comments').append('<%= j render @comments %>');
 <% if @comments.next_page %>
   $('.pagination').replaceWith('<%= j will_paginate @comments %>');
-window.history.pushState("", "", "/posts/show?page=<%= @comments.current_page %>");
+  window.history.pushState("", "", "/posts/<%= @post.id %>/comments?page=<%= @comments.current_page %>");
 <% else %>
   $(window).off('scroll');
   $('.pagination').remove();
