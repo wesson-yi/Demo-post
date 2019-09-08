@@ -1,0 +1,5 @@
+<%= will_paginate @comments %>
+<ul id="comments" class="comments", data-post-id="<%= @post.id %>">
+  <%= render @comments %>
+</ul>
+<div id="infinite-scrolling">
