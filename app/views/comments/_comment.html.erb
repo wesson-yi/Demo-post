@@ -3,6 +3,6 @@
     <%= comment.content %>
   </div>
   <div>
-    by:<%= comment.user.name %><%= format_timestamp(@post.created_at) %>
+    by: <span class='user-name'><%= comment.user.name %></span> <%= format_timestamp(@post.created_at) %>
   </div>
 </li>

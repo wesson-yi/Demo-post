@@ -1,0 +1,25 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+.comments {
+  list-style: none;
+  padding: 0;
+  .pagination {
+    margin-top: 15px;
+  }
+  li {
+    padding: 12px 0;
+    border-bottom: 2px solid #e8e8e8;
+    div:nth-child(1) {
+      fong-size: 16px;
+      margin-bottom: 15px;
+    }
+    div:nth-child(2) {
+      font-size: 13px;
+      .user-name {
+        font-weight: bold;
+      }
+    }
+  }
+}
