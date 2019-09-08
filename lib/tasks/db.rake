@@ -14,8 +14,10 @@ namespace :db do
   # REVIEW: What do you need here? script OR task?
   desc "create 10,000 comments for the post"
   task create_comments: :environment do
-    # user_names = YAML.load_file File.join(Rails.root, 'config/comments.json')
     comment_contents = JSON.parse(File.read File.join(Rails.root, 'config/comments.json'))
+    # REVIEW: YAML can read json else
+    # user_names = YAML.load_file File.join(Rails.root, 'config/comments.json')
+
     user_ids = User.ids
     post = Post.first
 
